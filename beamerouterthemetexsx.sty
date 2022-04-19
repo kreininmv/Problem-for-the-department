@@ -1,0 +1,17 @@
+\mode<presentation>
+
+\definecolor{mycolor}{RGB}{0,105,180}
+
+\setbeamertemplate{background}{
+  \begin{tikzpicture}
+  \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
+
+
+  \fill[color=mycolor] (0,\the\paperheight - 30) rectangle(\the\paperwidth, \the\paperheight);
+  {\node[anchor=west, white,font=\large] at (\the\paperwidth - 28, \the\paperheight - 15)	{\scriptsize\insertframenumber\hspace*{0.004ex} / \inserttotalframenumber };}    
+  {\node[anchor=west, white,font=\large] at (\the\paperwidth - 90, \the\paperheight - 15){\includegraphics[scale=0.1]{use_mipt_logo}};}  
+  
+  \end{tikzpicture}
+}
+
+\mode<all>

@@ -1,0 +1,51 @@
+\mode<presentation>
+
+\definecolor{mycolor}{RGB}{0,105,180}
+
+\setbeamertemplate{background}{
+  \begin{tikzpicture}
+  \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
+  
+  \fill[mycolor] (0,\the\paperheight - 31) rectangle(\the\paperwidth, \the\paperheight);
+
+  
+  %{\node[acnhor=west, white, font=\large] at (90, \the\paperheight - 15) {ТЕКСТ};}
+  
+  {\node[anchor=west, white,font=\large] at (\the\paperwidth - 90, \the\paperheight - 15){\includegraphics[scale=0.1]{use_mipt_logo}};}  
+  
+  \ifnum\thepage>1\relax%
+
+  \fill[white,opacity=1] (0,0) rectangle(\the\paperwidth,\the\paperheight);
+  \fi
+  \end{tikzpicture}
+}
+
+
+% Title page
+\defbeamertemplate*{title page}{texsx}[1][]
+{ 
+  \centering
+  \vspace{0.2cm}
+  \centering
+  \vspace{2cm}
+	
+  \usebeamerfont{title}\inserttitle\par%
+            
+  \centering
+  \vspace{1.5cm}
+  \usebeamerfont{author}\insertauthor%
+  
+  \centering    
+  \vspace{0.5cm}
+  \usebeamerfont{institute}\insertinstitute%
+  
+  
+  \centering    
+  \vspace{0.5cm}
+  \usebeamerfont{date}\insertdate%
+
+    
+}
+
+\mode
+<all>
